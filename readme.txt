@@ -1,5 +1,5 @@
 === Scheduled Content ===
-Contributors: danny159
+Contributors: Danny159
 Tags: scheduled content, timed, posts, content, page, streama
 Requires at least: 2.5
 Tested up to: 3.5
