@@ -3,7 +3,7 @@ Contributors: Danny159
 Tags: scheduled content, timed, posts, content, page, streama
 Requires at least: 2.5
 Tested up to: 3.5
-Stable tag: 1.0
+Stable tag: 1.1
 
 Scheduled content enables you to schedule portions of a post or page and/or set an expiery date for that content.
 
