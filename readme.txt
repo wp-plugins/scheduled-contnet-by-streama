@@ -36,3 +36,6 @@ The time is compared with your blog's time zone settings, if you set your time z
 
 = 1.0 =  
 * Public beta release
+
+= 1.1 =  
+* Fix time issue that casues content to appear 1 hour early

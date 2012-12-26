@@ -4,9 +4,11 @@ Plugin Name: Scheduled Contnet by Streama
 Plugin URI: http://streama.co.uk/plugins/scheduled-content/
 Description: Scheduled content enables you to schedule portions of a post or page and/or set an expiery date for that content.
 Author: Streama
-Version: 1.0
+Version: 1.1
 License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 */
+
+date_default_timezone_set(get_option('timezone_string'));
 
 add_shortcode('schedule', 'streama_schdule');
 	
@@ -65,4 +67,5 @@ function streama_schdule($atts, $content){
 	
 	// Finally return what we find out
 	return $return;
+	
 }
