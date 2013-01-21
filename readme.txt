@@ -3,7 +3,7 @@ Contributors: Danny159
 Tags: scheduled content, timed, posts, content, page, streama
 Requires at least: 2.5
 Tested up to: 3.5
-Stable tag: 1.1
+Stable tag: 1.2
 
 Scheduled content enables you to schedule portions of a post or page and/or set an expiery date for that content.
 
@@ -34,8 +34,12 @@ The time is compared with your blog's time zone settings, if you set your time z
 
 == Changelog ==
 
-= 1.0 =  
-* Public beta release
+= 1.2 =
+* Bug Fixes
+* Debug
 
 = 1.1 =  
 * Fix time issue that casues content to appear 1 hour early
+
+= 1.0 =  
+* Public beta release

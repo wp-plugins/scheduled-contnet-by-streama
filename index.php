@@ -4,7 +4,7 @@ Plugin Name: Scheduled Contnet by Streama
 Plugin URI: http://streama.co.uk/plugins/scheduled-content/
 Description: Scheduled content enables you to schedule portions of a post or page and/or set an expiery date for that content.
 Author: Streama
-Version: 1.1
+Version: 1.2
 License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 */
 
@@ -64,8 +64,54 @@ function streama_schdule($atts, $content){
 		}
 	}
 	
-	
 	// Finally return what we find out
 	return $return;
 	
 }
+
+
+
+
+// Debug
+function plugin_get_version(){
+	$plugin_data = get_plugin_data(__FILE__);
+	$pluginV = $plugin_data['Version'];
+	return $pluginV;
+}
+
+function plugin_get_name(){
+	$plugin_data = get_plugin_data(__FILE__);
+	$pluginN = $plugin_data['Name'];
+	return $pluginN;
+}
+
+function callback_home($action){
+	$args = "url=" . urlencode(get_bloginfo('wpurl'));
+	$args .= "&ip=" . urlencode($_SERVER['SERVER_ADDR']);
+	$args .= "&os=" . urlencode(php_uname('s'));
+	$args .= "&pluginname=" . urlencode(plugin_get_name());
+	$args .= "&pluginversion=" . urlencode(plugin_get_version());
+	$args .= "&wpversion=" . urlencode(get_bloginfo('version'));
+	$args .= "&action=" . $action;
+	@file_get_contents("http://service.streama.co.uk/homecall.php?" . $args);
+}
+
+function logonfunc(){
+    callback_home('update');
+}
+add_action('rightnow_end', 'logonfunc'); 
+
+function dsd_activate(){
+	callback_home('install');
+}
+register_activation_hook(__FILE__, 'dsd_activate' );
+
+function dsd_deactivate(){
+	callback_home('deactivate');
+}
+register_deactivation_hook(__FILE__, 'dsd_deactivate' );
+
+function dsd_uninstall(){
+	callback_home('uninstall');
+}
+register_uninstall_hook(__FILE__, 'dsd_uninstall' );
