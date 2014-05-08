@@ -4,7 +4,8 @@ Plugin Name: Scheduled Contnet by ThatBlogger
 Plugin URI: http://thatblogger.co/scheduled-content-wordpress-plugin/
 Description: Scheduled content enables you to schedule portions of a post or page and/or set an expiery date for that content.
 Author: ThatBlogger
-Version: 2.0
+Author URI: http://thatblogger.co/
+Version: 2.1
 License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 */
 
@@ -47,14 +48,14 @@ function thatblogger_schdule($atts, $content){
 		// No expiery check to see if the content should be shown yet
 		if($curStamp >= $userTimeA){
 			// Return the content
-			$return = $content;
+			$return = do_shortcode($content);
 		}
 	}else{
 		// Expiery set so lets check if the content has expired.
 		if($curStamp < $userTimeB){
 			if($curStamp >= $userTimeA){
 				// Return the content
-				$return = $content;
+				$return = do_shortcode($content);
 			}
 		}
 	}

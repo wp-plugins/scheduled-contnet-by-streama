@@ -25,6 +25,8 @@ The 4 parameters are "on", "at", "expon" and "expat".
 
 The time is compared with your blog's time zone settings, if you set your time zone to local time zone it would be easy for you. Go to "General" settings of your wordpress dashboard, under "Time Zone" you can set the time zone you prefer.
 
+Shortcodes will also run inside this shortcode!!
+
 
 == Installation ==
 
@@ -33,6 +35,9 @@ The time is compared with your blog's time zone settings, if you set your time z
 3. Start using the shortcode
 
 == Changelog ==
+
+= 2.1 =
+* Add feature to allow shortcodes to be inside the scheduled content - http://wordpress.org/support/topic/shortcodes-in-scheduled-content
 
 = 2.0 =
 * Bug Fixes
