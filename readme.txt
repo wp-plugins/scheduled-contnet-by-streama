@@ -1,8 +1,8 @@
 === Scheduled Content ===
 Contributors: Danny159
-Tags: scheduled content, timed, posts, content, page, streama
-Requires at least: 2.5
-Tested up to: 3.5
+Tags: scheduled content, timed, posts, content, page, streama, thatblogger
+Requires at least: 3.5
+Tested up to: 3.9
 Stable tag: 1.2
 
 Scheduled content enables you to schedule portions of a post or page and/or set an expiery date for that content.
@@ -13,7 +13,7 @@ After installing and activating the plugin you can use the shortcode [schedule].
 
 Sample -
 
-[schedule on='2012-12-01' at="10:01" expon='2012-12-01' expat="13:15"]
+[schedule on='2014-12-01' at="10:01" expon='2014-12-01' expat="13:15"]
 the content you want to hide here
 [/schedule]
 
@@ -33,6 +33,11 @@ The time is compared with your blog's time zone settings, if you set your time z
 3. Start using the shortcode
 
 == Changelog ==
+
+= 2.0 =
+* Bug Fixes
+* Remove Debug Code
+* General Cleaning of Code
 
 = 1.2 =
 * Bug Fixes
